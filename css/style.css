@@ -1,0 +1,790 @@
+/*font-face{
+	 font-family: xpsbox;
+	 src:url(../font/Open_Sans/OpenSans-Light.ttf);
+}*/
+*{
+	margin: 0px;
+	padding: 0px;	
+}
+body{
+	/*font-family: xpsbox;*/
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+}
+html {
+  scroll-behavior: smooth;
+}
+.cleardiv{
+	clear: left;
+}
+/*the main container*/
+.maincontainer{
+	background-image: url('../img/back.png');
+	background-repeat:repeat-x;
+	/*height: 1500px
+	width: 100%;
+	background-image: url('../img/back.png');
+	background-repeat:repeat-x;*/
+}
+.h1{
+	text-align: center;
+	color: #FEC786;
+	margin-bottom: 20px;
+}
+.servicemain{
+	background-image: url('../img/back.png');
+	background-repeat:repeat-x;
+	float: left;	
+}
+/*the header which contain the logo and the main menu*/
+.headerpart{
+	background-image: linear-gradient(to top ,rgb(53, 62, 77), rgba(185, 116, 77,0.5));
+	padding: 10px;
+	height: 150px;
+}
+.logo{
+	margin: 20px 0px 0px 50px;
+	float: left;
+}
+/*this for making the logo rounded shape*/
+.logo img{
+	width: 100px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 5px 5px rgba(185, 116, 77,0.6);
+}
+.logo img:hover{
+	transform: scale(1.3);
+	transition: 3s;
+	box-shadow: 0px 0px 5px 5px rgba(215, 216, 216,0.6);
+}
+.menu{
+	float: right;
+	margin: 0px 50px 0px 0px;
+	line-height: 150px;
+}
+.menu a{
+	color: #FEC786;
+	text-decoration: none;
+	padding:0px 10px 0px 10px;
+	border-right: 2px solid #FEC786;
+}
+.menu a:last-child{
+	border: none;
+}
+/*change the color and size for the menu*/
+.menu a:hover{
+	color: #DFE8E7;
+	font-size: 25px;
+	transition: 4s;
+}
+/*the main body which contain the content of the webpage*/
+.mainpart{		
+	/*don't change anything here and don't add background-repeat: repeat-x;*/
+	background-image: url('../img/back.png');
+}
+/*styling the index.html*/
+.img{
+	width: 100%;
+	float: left;
+	height: 275px;
+	text-align: center;
+	/*this is for making background image */
+	/*
+	opacity: 0.9;
+	padding: 10px;
+	background-position: center;
+	background-size: 50%;
+	background-image: url('../img/main_image.jpg');
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 235px;
+	text-align: center;*/
+}
+.img img{
+	width: 45%;
+	box-shadow: 0px 0px 5px 5px rgba(185, 116, 77,0.6);
+}
+.img img:hover{
+	transform: scale(1.3);
+	transition: 3s;
+	box-shadow: 0px 0px 5px 5px rgba(215, 216, 216,0.6);
+
+}
+
+.serviceslargerimg{
+	background-image: url('../img/shipping.jpg');
+	background-repeat: no-repeat;
+	height: 250px;
+	background-position: center;/*this will put the background image in the center*/
+}
+/*this is for the text over the main service image*/
+.textoverimage{
+	float: left;
+	margin: 40px 0px 0px 200px;
+	border-radius: 10px ;
+	text-align: center;
+	padding: 10px;
+	width: 550px;
+	color: #FEC786;
+	background-image: url('../img/back.png');
+	background-repeat: repeat-x;
+	opacity:0.65;
+	text-transform: capitalize;
+}
+/*be careful when  uncomment this part*/
+/*this is for the image if it is not as background*/
+/*.img img{
+	width: 50%; /*image size inside the div*//*
+	box-shadow: 0px 0px 5px 5px rgba(185, 116, 77,0.6);/*shadow around image 
+}
+.img img:hover{
+	transform: scale(1.3);
+	transition: 3s;
+	box-shadow: 0px 0px 5px 5px rgba(215, 216, 216,0.6);
+	/*if you add more text and the image cover them you can make the image under them by this*/
+	/*position: relative;
+	z-index: 1;*/
+}
+.middle{
+	
+}
+.midtext{
+	margin-left: 50px;
+	color: #FEC786;
+	float: left;
+	width: 45%;
+	text-align: left;
+	line-height: 34px;
+}
+.midtext a{
+	text-decoration: none;
+	color: #FEC786;
+}
+.midtext a:hover{
+	color: #DFE8E7;
+	font-size: 25px;
+	transition: 4s;
+}
+.midimg{
+	float: left;
+	width: 50%;
+	margin-left: 10px;
+}
+.midimg img{
+	width: 70%; /*image size inside the div*/
+	box-shadow: 0px 0px 5px 5px rgba(185, 116, 77,0.6);/*shadow around image */
+	opacity: 0.4;
+}
+.midimg img:hover{
+	opacity: 1;
+	transition: 3s;
+	box-shadow: 0px 0px 5px 5px rgba(215, 216, 216,0.6);
+}
+.mainserices{
+	float: left;
+	background-image: url('../img/back.png');
+	background-repeat: repeat-x;	
+	width: 100%;
+	/*height: 510;*//*check this if there any problems happen in other pcs*/
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+/*flip images*/
+.flip-box {
+  background-color: transparent;
+  width: 100%;
+  height: 315px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 315px;
+  text-align: left;
+  transition: transform 3s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+  transition: 3s;
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  text-align: justify;
+}
+/* Style the back side */
+.flip-box-back {
+  	color: #FEC786;
+  	transform: rotateY(180deg);
+}
+.mainsericesleft{
+	margin: 10px 20px 0px 20px;
+	float: left;
+	width: 30%;
+}
+.mainsericesleft img{
+	width: 100%;
+	box-shadow: 0px 0px 5px 5px rgba(185, 116, 77,0.6);
+}
+.mainsericesmid{
+	margin: 10px 20px 0px 20px;
+	float: left;
+	width: 30%;
+}
+.mainsericesmid img{
+	width: 100%;
+	box-shadow: 0px 0px 5px 5px rgba(185, 116, 77,0.6);
+}
+.mainsericesright{
+	margin: 10px 20px 0px 20px;
+	float: left;
+	width: 30%;
+}
+.mainsericesright img{
+	width: 100%;
+	box-shadow: 0px 0px 5px 5px rgba(185, 116, 77,0.6);
+}
+
+/*the footer of the page*/
+.footerpart{
+	color: #FEC786;
+	height: 385px;
+	background-image: linear-gradient(to bottom ,rgb(53, 62, 77), rgba(185, 116, 77,0.5));
+	/*background-image: url('../img/back.png');
+	background-repeat: repeat-x;*/
+	padding:70px 0px 0px 15px;
+}
+.h2aboutus{
+	margin-left: 50px;
+	width: 35%;
+	float: left;
+}
+.aboutuslogo{
+	float: left;
+}
+.aboutuslogo img{
+	width: 100px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 5px 5px rgba(185, 116, 77,0.6);
+}
+.mid{
+	margin: 15px 0px 0px 50px;
+	width: 35%;
+	text-align: justify;
+	line-height: 35px;
+}
+.lefti{
+	text-align: center;
+	float: left;
+	margin: 100px 0px 0px 450px;
+}
+.social{
+	float: left;
+	margin-left: 480px;
+	margin-top: 15px;
+	text-align: center;
+}
+.social img{
+	width: 80px;
+	box-shadow: 0px 0px 5px 5px rgba(185, 116, 77,0.6);
+	border-radius: 50%;
+}
+.social img:hover{
+	transition: 2s;
+	transform: rotateY(360deg);
+}
+/*the main container for the serives*/
+.servicemainpart{
+	margin-top: 10px;
+	height: 850px;
+	background-image: url('../img/back.png');
+}
+.gridservice{
+	text-align: center;
+	background-image: url('../img/back.png');
+	height: 500px;
+}
+.ourservice{
+	margin-top: 25px;
+	color: #FEC786;
+	font-weight: bolder;
+}
+.servicetextleft{
+	margin: 50px 10px 0px 10px;
+	width: 31%;
+	color: #FEC786;
+	text-align: justify;
+	float: left;
+	background-image: url('../img/back.png');
+	background-repeat: repeat-x;
+}
+.servicetextleft a{
+	text-decoration: none;
+	color: #FEC786;
+}
+.service{
+	float: left;
+	margin-top: 15px;
+	width: 100%;
+}
+.img1{
+	width: 100%;
+	overflow: hidden;/*to force the image not to come out the div*/
+}
+.img1 img{
+	/*to make the images same width */
+	width: 392px;
+	height: 246px;
+  	transition: transform 1s ease-in-out;
+}
+.img1 img:hover{
+	transform:scale(1.5) rotate(-15deg);
+	transition: all 2s ease-in-out;	
+}
+.customer{
+	float: left;
+	margin-left: 325px;
+}
+.customer img{
+	width: 90px;
+}
+/*
+.customer img:hover{
+	transition: 2s;
+	transform: rotatey(360deg);
+}*/
+.corner{
+	background-color: red;
+}
+.fixup{
+	border-radius: 50%;
+	line-height: 67px;
+	text-align: center;
+	float: right;
+	width: 70px;
+	height: 70px;
+	margin: 17px 20px 0px 0px;
+	padding: 5px;
+	box-shadow: 0px 0px 5px 5px rgba(185, 116, 77,0.6);
+}
+.slow{
+	transition-timing-function: ease-in-out;
+}
+.rocket img{
+	width: 65px;
+	transform: rotateZ(45deg);
+}
+/*how to use animation*/
+.rocket img:hover{
+	animation-name: updown;
+  	animation-duration: 3s;
+  	animation-iteration-count: infinite;
+}
+/*here we defined the animation name and what it will do.*/
+@keyframes updown{
+	from{
+		transform: translateY(0px)rotateZ(45deg);
+	}
+	to{
+		transform: translateY(-180px);
+	}
+}
+/*the news line maybe apply it or not*/
+.marquee{
+	 height: 30px;	
+	 overflow: hidden;
+	 position: relative;
+}
+.marquee h3 {
+ font-size: 16px;
+ color: gray;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 30px;
+ text-align: center;
+ /* Starting position */
+ transform:translateX(100%);
+ /* Apply animation to this element */	
+ animation: marquee 10s linear infinite;
+}
+/* Move it (define the animation) */
+@keyframes marquee {
+ 0%   {transform: translateX(100%);}
+ 100% {transform: translateX(-100%);}
+}
+/*the galary*/
+.galary{	
+	margin-top: 30px;
+	height: 1100px;
+	background-image: url('../img/back.png');
+	text-align: center;
+	
+	/*
+	margin-top: 35px;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 400px 400px 400px 400px;
+	grid-gap: 10px;
+	justify-content: center;*/
+}
+.photos{
+	box-shadow: 0px 0px 5px 5px rgba(185, 116, 77,0.6);
+	float: left;
+	width: 350px;
+	height: 300px;
+	margin: 34px;
+	overflow: hidden;
+	transition-delay: 1s;
+}
+.photos img{
+	width: 350px;
+	height: 300px;
+	transition: transform 1s ease-in-out;
+}
+.photos img:hover{
+	transform: scale(1.5);
+	transition: transform 1s ease-in-out;
+}
+/************************************************************/
+.con1 {
+	position: relative;
+	width: 100%;
+}
+.pa {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(53, 62, 77,0.9);
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+	transition: 1s ease;
+}
+.con1:hover .overlay {
+	height: 180px;/*size of that goes up*/
+}
+.text {
+	width: 100%;
+  	white-space: nowrap; 
+	color: white;
+	font-size: 14px;
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: justify;
+}
+/************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.imgs1{
+
+}
+.imgs1 img{
+	width: 550px;
+	height: 550px;
+	border: 2px solid blue;
+}
+.imgs2{
+	
+}
+.imgs2 img{
+	width: 550px;
+	height: 550px;
+	border: 2px solid blue;
+}
+.imgs3{
+	
+}
+.imgs3 img{
+	border: 2px solid red;
+	width: 550px;
+	height: 550px;
+}
+.imgs4{
+	
+}
+.imgs4 img{
+
+}
+.imgs5{
+	
+}
+.imgs5 img{
+	
+}
+.imgs6{
+	
+}
+.imgs6 img{
+	
+}
+.imgs7{
+
+}
+.imgs7 img{
+	
+}
+.imgs8{
+
+}
+.imgs8 img{
+	
+}*/
+/*shopping page*/
+.shopping{
+	background-image: url('../img/backshopping.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 700px;
+}
+.shoppingmain{
+	font-size: 100px;
+	margin-top: 400px;
+	text-align: center;
+	color: #353E4D;
+	font-weight: bolder;
+}
+.mainabout{
+	height: 2095px;
+	background-image: url('../img/back.png');
+}
+.whyxpsbox{
+	margin-top: 50px;
+}
+.whyimg{
+	display: inline-block;
+	width: 55%;
+	margin-left: 100px;
+}
+.whyimg img{
+	width: 630px;
+	height: 400px;
+}
+.whytext{
+	display: inline-block;
+	width: 30%;
+	margin-left: 50px;
+	line-height: 60px;
+}
+.whytext h2{
+	color: #FEC786;
+	font-size: 50px;
+	font-weight: bold;
+}
+.whytext p{
+	color: #DFE8E7;
+}
+.whytext span{
+	color: #FEC786;
+	font-size: 20px;
+	font-weight: bolder;
+}
+.contact{
+	background-image: url('../img/back.png');
+	height: 2450px;
+}
+.contactuper{
+	background-image: url('../img/contact.jpg');
+	box-shadow: 0px 0px 5px 5px rgba(185, 116, 77,0.6);
+	height: 400px;
+}
+.contactext{
+	padding: 150px 0px 0px 300px;
+}
+.contactext h1,h4{
+	color: #FEC786;
+}
+.contactext h4{
+	margin-left: 55px;
+}
+.globadd{
+	background-image: linear-gradient(to top, rgba(53, 62, 77,0.1) 0%, rgba(181, 157, 145,0.5) 100%), url('../img/backshopping.jpg');
+	background-size:  cover;
+	box-shadow: 0px 0px 5px 5px rgba(185, 116, 77,0.6);
+	display: flex;
+	height: 645px;
+	padding:15px;
+	margin: 50px 35px;
+	align-items: stretch;
+	justify-content: center;/* put the divs in middle*/
+	flex-wrap: wrap;/* if i add new address it will make it wrapped*/
+}
+.addresses{
+	width: 31%;
+	margin: 10px;
+	overflow: hidden;
+}
+.flag{
+	margin: 5px 0px 0px 5px;
+	width: 50%;
+}
+.flag img{
+	width: 100%;
+	box-shadow: 0px 0px 5px 5px rgba(185, 116, 77,0.6);
+}
+.countryadd{
+	background-image: linear-gradient(to right, rgba(181, 157, 145,1) , rgba(53, 62, 77,0.1));
+	color: #FEC786;
+	margin: 5px 0px 0px 0px;
+	width: 100%;
+	text-align: left;
+	font-size: 20px;
+	font-weight: bolder;
+}
+.contactform{
+	margin: 60px 0px 0px 100px;
+}
+.fieldform{
+	background-image: url('../img/weclome.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 645px;
+}
+legend{
+	box-shadow: 0px 0px 5px 5px rgba(185, 116, 77,0.6);
+	/*box-shadow: inset 0px 0px 5px 5px rgba(185, 116, 77,0.6);*//*this is for the box shadow inside the legend*/
+	border: 2px solid #DFE8E7;
+	border-radius: 15px;
+	padding: 10px 45px;
+	color: #FEC786;
+	margin: 20px 0px 0px 50px; 
+	font-size: 35px;
+	background-image: url('../img/back.png');
+}
+fieldset{
+	padding: 50px;
+	border-radius: 15px;
+	width: 80%;
+	box-shadow: 0px 0px 5px 5px rgba(185, 116, 77,0.6);
+	border: 2px solid #DFE8E7;
+}
+.labels{
+	padding: 10px;
+	margin: 10px;
+	height: 50px;
+}
+.contactsperson{
+	width: 30px;
+	height: 30px;
+}
+.mainlable{
+	margin: 0px 15px 0px 5px;
+	color: #FEC786;
+	display: inline-block;/*this is to give the label a width*/
+	width: 120px;
+}
+.up{
+	float: left;
+	margin-top: 5px;
+}
+.down{
+	float: left;
+	margin: 5px 0px 0px 10px;
+}
+.inputtext{
+	outline: none;
+	height: 30px;
+	width: 450px;
+}
+.textareadiv{
+	width: 50%;
+	height: 100px;
+	margin: 30px 0px 0px 205px;
+	overflow: hidden;
+}
+.textinside{
+	width: 97%;
+	height: 100%;
+	resize: none;
+	overflow: auto;
+}
+.submit{
+	color: #FEC786;
+	padding: 10px;
+	margin: 44px 0px 0px 350px;
+	border-radius: 25px;
+	width: 110px;
+	text-align: center;
+	background-color: #353E4D;
+	border:5px solid #FEC786 ;
+	font-size: 20px;
+	font-weight: bolder;
+	outline: none;
+}
+.submit:hover{
+	color: #353E4D;
+	border:5px solid #353E4D;
+	background-color: #FEC786;
+	font-weight: bolder;
+	/*text-shadow: 1px 1px 1px white;*//*if you want text shadow*/
+}
+.button{
+	color: #FEC786;
+	padding: 5px;
+	margin: 35px 0px 0px 300px;
+	border-radius: 25px;
+	width: 150px;
+	text-align: center;
+	background-color: transparent;
+	border:2px solid #DFE8E7 ;
+}
+.button:hover{
+	color: #DFE8E7;
+	border:2px solid #FEC786;
+}
+.map{
+	padding: 0px 10px 0px 10px;
+	margin-top: 40px;
+	height: 500px;
+}
+.map iframe{
+	width: 100%;
+	height: 100%;
+	box-shadow: 0px 0px 5px 5px rgba(185, 116, 77,0.6);
+}
